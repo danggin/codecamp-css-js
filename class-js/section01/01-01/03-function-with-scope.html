@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>function and scope</title>
+    <script>
+      function add(a, b) {
+        const result = a + b;
+        console.log(result);
+      }
+
+      add(2, 5);
+
+      // 스코프
+
+      function qqq() {
+        const banana = 10;
+        console.log(banana); // 10
+
+        function aaa() {
+          //   const banana = 50;
+          console.log(banana); // 10
+        }
+        aaa();
+
+        console.log(banana); // 10
+      }
+
+      qqq();
+    </script>
+  </head>
+  <body></body>
+</html>
