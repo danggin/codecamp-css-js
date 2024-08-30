@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>Local storage with JSON</title>
+    <script>
+      const setFruits = () => {
+        const fruits = {
+          사과: 3,
+          바나나: 2,
+          딸기: 10,
+          복숭아: 10,
+        };
+
+        // localStorage.setItem('fruits', fruits); => 이렇게 넣으면 이상하게 저장됨
+        localStorage.setItem('fruits', JSON.stringify(fruits));
+      };
+      const getFruits = () => {
+        const fruits = localStorage.getItem('fruits');
+        const resultFruits = JSON.parse(fruits);
+        console.log(resultFruits);
+      };
+    </script>
+  </head>
+  <body>
+    <button onclick="setFruits()">과일 담기</button>
+    <button onclick="getFruits()">과일 꺼내기</button>
+  </body>
+</html>

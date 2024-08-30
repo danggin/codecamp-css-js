@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>animation</title>
+    <style>
+      @keyframes rotating {
+        from {
+          transform: rotateY(20deg);
+          background-color: rgb(123, 230, 176);
+        }
+        50% {
+          transform: rotateY(90deg);
+          background-color: rgb(141, 128, 240);
+        }
+        to {
+          transform: rotateY(180deg);
+          background-color: rgb(234, 255, 0);
+        }
+      }
+
+      .paper {
+        width: 100px;
+        height: 150px;
+        background-color: azure;
+        animation-name: rotating;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="paper"></div>
+  </body>
+</html>

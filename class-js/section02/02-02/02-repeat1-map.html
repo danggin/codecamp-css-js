@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>map</title>
+    <script>
+      // 기초 map 실습
+
+      //   const friends = ['철수', '영희', '훈이'];
+
+      //   const children = friends.map((element) => element + '어린이');
+      //   console.log(children);
+
+      //   const children2 = friends.map((element, index) => element + '어린이: ' + (index + 1) + '번째');
+      //   console.log(children2);
+
+      const addCard = () => {
+        const card1 = {
+          name: '철수',
+          age: 12,
+          school: '다람쥐초등학교',
+        };
+
+        const card2 = {
+          name: '영희',
+          age: 13,
+          school: '다람쥐초등학교',
+        };
+        const cardList = [card1, card2];
+        localStorage.setItem('cardList', JSON.stringify(cardList));
+      };
+
+      const showCard = () => {
+        const cardListString = localStorage.getItem('cardList') !== null ? localStorage.getItem('cardList') : '[]';
+        const cardList = JSON.parse(cardListString);
+
+        const cardHTML = cardList.map(
+          (el, index) => `
+        <div>
+            <a href="./02-repeat2-map-detail.html?pageNumber=${index}">
+            ${el.name}는 ${el.age}살 입니다.
+            </a>
+        </div>
+        `
+        );
+
+        const cards = cardHTML.join('');
+
+        /*** 
+         * <div><a href="./02-repeat2-map-detail.html?pageNumber=0">철수는 12살 입니다.</a></div>
+            <div><a href="./02-repeat2-map-detail.html?pageNumber=1">영희는 13살 입니다.</a></div>
+         * 
+         * 
+         * ***/
+
+        document.getElementById('card-list').innerHTML = cards;
+      };
+    </script>
+  </head>
+  <body>
+    <button onclick="addCard()">학생증 등록하기</button>
+    <button onclick="showCard()">학생증 그리기</button>
+    <div id="card-list"></div>
+  </body>
+</html>

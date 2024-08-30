@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>local storage, sesstion storage</title>
+    <script>
+      // 1. 변수에 저장하기: 새로고침[지워짐], 재시작[지워짐]
+      // let apple = 0;
+      // const savaOneApple = () => {
+      //   apple = 1;
+      // };
+      // const savaTwoApple = () => {
+      //   apple = 2;
+      // };
+      // const savaThreeApple = () => {
+      //   apple = 3;
+      // };
+      // const getApple = () => {
+      //   alert(`사과 바구니의 사과가 ${apple}개 들어 있어요.`);
+      // };
+
+      // 2. 세션 스토리지에 저장하기: 새로고침[안지워짐], 재시작[지워짐]
+      // const savaOneApple = () => {
+      //   sessionStorage.setItem('apple', 1);
+      // };
+      // const savaTwoApple = () => {
+      //   sessionStorage.setItem('apple', 2);
+      // };
+      // const savaThreeApple = () => {
+      //   sessionStorage.setItem('apple', 3);
+      // };
+      // const getApple = () => {
+      //   const apple = sessionStorage.getItem('apple');
+      //   alert(`사과 바구니의 사과가 ${apple}개 들어 있어요.`);
+      // };
+
+      // 3. 로컬 스토리지: 새로고침[안지워짐], 재시작[안지워짐]
+      const savaOneApple = () => {
+        localStorage.setItem('apple', 1);
+      };
+      const savaTwoApple = () => {
+        localStorage.setItem('apple', 2);
+      };
+      const savaThreeApple = () => {
+        localStorage.setItem('apple', 3);
+      };
+      const getApple = () => {
+        const apple = localStorage.getItem('apple');
+        alert(`사과 바구니의 사과가 ${apple}개 들어 있어요.`);
+      };
+    </script>
+  </head>
+  <body>
+    <button onclick="savaOneApple()">사과 1개 담기</button><br />
+    <button onclick="savaTwoApple()">사과 2개 담기</button><br />
+    <button onclick="savaThreeApple()">사과 3개 담기</button><br />
+    <button onclick="getApple()">사과 개수 불러오기</button><br />
+  </body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>skeleton</title>
+    <style>
+      @keyframes skeleton {
+        from {
+          transform: translateX(-700px, -700px);
+        }
+
+        to {
+          transform: translate(700px, -200px);
+        }
+      }
+
+      .skeleton-box {
+        width: 500px;
+        height: 500px;
+        background-color: lightgray;
+        border-radius: 8px;
+        overflow: hidden;
+      }
+
+      .skeleton-stick {
+        width: 100px;
+        height: 1000px;
+        filter: blur(70px);
+        background-color: #f5f5f585;
+        animation-name: skeleton;
+        animation-duration: 1.5s;
+        animation-iteration-count: infinite;
+        animation-delay: 0.1s;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="skeleton-box">
+      <div class="skeleton-stick"></div>
+    </div>
+  </body>
+</html>

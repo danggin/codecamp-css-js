@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>Query String - Detail</title>
+    <script>
+      const queryString = location.search;
+      const parameters = new URLSearchParams(queryString);
+      const banana = parameters.get('banana');
+      const apple = parameters.get('apple');
+
+      alert(`바나나는 ${banana}개, 사과는 ${apple}개가 있습니다.`);
+      console.log(`바나나는 ${banana}개, 사과는 ${apple}개가 있습니다.`);
+    </script>
+  </head>
+  <body>
+    <div>상세보기 페이지입니다.</div>
+  </body>
+</html>

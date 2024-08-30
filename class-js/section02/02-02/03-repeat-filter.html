@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>filter</title>
+    <script>
+      const filternig = (event) => {
+        const target = event.target.value;
+        console.log(target);
+
+        let list = [
+          {
+            title: '비옴',
+            content: 'ㅠㅠ',
+            status: 'sad',
+          },
+          {
+            title: '비옴',
+            content: 'ㅠㅠ',
+            status: 'happy',
+          },
+          {
+            title: '비옴',
+            content: 'ㅠㅠ',
+            status: 'angry',
+          },
+          {
+            title: '비옴',
+            content: 'ㅠㅠ',
+            status: 'angry',
+          },
+          {
+            title: '비옴',
+            content: 'ㅠㅠ',
+            status: 'happy',
+          },
+        ];
+
+        const filteredList = list.filter((el) => el.status == target);
+      };
+    </script>
+  </head>
+  <body>
+    <select onchange="filternig(event)">
+      <option>선택하세요.</option>
+      <option value="happy">행복</option>
+      <option value="sad">슬픔</option>
+      <option value="angry">화남</option>
+    </select>
+  </body>
+</html>

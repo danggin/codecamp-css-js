@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>transform with transition</title>
+    <style>
+      body {
+        padding: 50px;
+      }
+      .paper {
+        width: 100px;
+        height: 150px;
+        background-color: lightskyblue;
+        transition: all 1s;
+      }
+
+      .paper:hover {
+        transform: rotateY(180deg);
+        background-color: lightcoral;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="paper"></div>
+  </body>
+</html>
