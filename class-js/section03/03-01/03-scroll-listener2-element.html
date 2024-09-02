@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>window scroll listener</title>
+    <style>
+      #box {
+        width: 1000px;
+        height: 800px;
+        overflow-y: scroll;
+      }
+    </style>
+    <script>
+      window.onload = () => {
+        document.getElementById('box').addEventListener('scroll', () => {
+          const scrollTop = document.getElementById('box').scrollTop;
+          console.log(scrollTop);
+
+          if (scrollTop > 0) {
+            document.querySelector('.image').style = 'border: 20px solid skyblue;';
+          } else {
+            document.querySelector('.image').style = 'border: none';
+          }
+        });
+      };
+    </script>
+  </head>
+  <body>
+    <div id="box">
+      <img class="image" src="./00-dog.jpg" width="100%" />
+    </div>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>event bubbling - list</title>
+    <style>
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: aquamarine;
+        margin-top: 10px;
+      }
+    </style>
+    <script>
+      const deleteImage = (event, index) => {
+        event.preventDefault()
+        // 이게 없으면 바닥에 있는 부모 요소 <a>의 기본 기능 실행됨
+
+
+          alert(`${index}번 사진이 삭제되었습니다.`)
+      }
+    </script>
+  </head>
+  <body>
+    <a href="./01-event-bubbling2-prevnet-default-detail.html">
+      <div class="box">
+        <button onclick="deleteImage(event, 1)">1번 삭제</button>
+      </div>
+    </a>
+
+    <a href="./01-event-bubbling2-prevnet-default-detail.html">
+      <div class="box">
+        <button onclick="deleteImage(event, 2)"">2번 삭제</button>
+      </div>
+    </a>
+  </body>
+</html>

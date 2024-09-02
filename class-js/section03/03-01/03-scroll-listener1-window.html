@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>window scroll listener</title>
+    <script>
+      window.addEventListener('scroll', () => {
+        const scrollY = window.scrollY;
+
+        if (scrollY > 0) {
+          document.querySelector('.image').style = 'border: 20px solid skyblue;';
+        } else {
+          document.querySelector('.image').style = 'border: none';
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <img class="image" src="./00-dog.jpg" width="1000px" />
+  </body>
+</html>

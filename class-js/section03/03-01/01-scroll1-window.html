@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>window scroll</title>
+    <script>
+      const scrollToTop = () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' }); // 스크롤 맨 위로 부드럽게 올려줘
+        // window.scrollBy({ top: -500 }); // 현재 위치에서 지정한 만큼 올려줘
+      };
+    </script>
+  </head>
+  <body>
+    <img src="./00-dog.jpg" width="100%" />
+    <button onclick="scrollToTop()">맨 위로 이동</button>
+  </body>
+</html>
