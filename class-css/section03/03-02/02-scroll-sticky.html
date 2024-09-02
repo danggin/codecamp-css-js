@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>scroll sticky</title>
+    <style>
+      /* 1. 스크롤 영역 */
+      .wrap {
+        width: 500px;
+        height: 300px;
+        overflow-y: scroll;
+        border: 1px solid palegoldenrod;
+      }
+
+      .box {
+        width: 150px;
+        height: 150px;
+        background-color: lightskyblue;
+        margin-bottom: 10px;
+      }
+
+      /* 2. 헤더 영역 */
+      header {
+        position: sticky;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 50px;
+        line-height: 50px;
+        background-color: aliceblue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <header>민지의 다이어리</header>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+    </div>
+  </body>
+</html>

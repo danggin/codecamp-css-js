@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>overflow-x</title>
+    <style>
+      .wrap {
+        width: 200px;
+        height: 200px;
+        overflow-x: scroll;
+        border: 1px solid palegoldenrod;
+        display: flex;
+      }
+
+      .box {
+        width: 150px;
+        height: 150px;
+        background-color: lightskyblue;
+        margin-left: 10px;
+        flex-shrink: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+    </div>
+  </body>
+</html>
