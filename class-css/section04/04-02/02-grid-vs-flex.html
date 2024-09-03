@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <title>Grid vs FLex</title>
+    <style>
+      .payment-group1 {
+        display: flex;
+        flex-wrap: wrap;
+        background-color: lightblue;
+        justify-content: center;
+        gap: 10px;
+        width: 400px;
+        margin-bottom: 20px;
+        padding: 20px;
+      }
+
+      .payment-group2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        place-items: center;
+        row-gap: 10px;
+        background-color: lightblue;
+        padding: 20px;
+        width: 400px;
+      }
+      .payment1,
+      .payment2 {
+        width: 100px;
+        height: 30px;
+        background-color: paleturquoise;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="payment-group1">
+      <div class="payment1">신용카드</div>
+      <div class="payment1">계좌이체</div>
+      <div class="payment1">핸드폰결제</div>
+      <div class="payment1">무통장입금</div>
+      <div class="payment1">포인트결제</div>
+    </div>
+    <div class="payment-group2">
+      <div class="payment2">신용카드</div>
+      <div class="payment2">계좌이체</div>
+      <div class="payment2">핸드폰결제</div>
+      <div class="payment2">무통장입금</div>
+      <div class="payment2">포인트결제</div>
+    </div>
+  </body>
+</html>

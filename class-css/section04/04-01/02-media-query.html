@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>Media query</title>
+    <style>
+      .group {
+        display: flex;
+      }
+
+      .box-group {
+        display: flex;
+        flex-wrap: wrap;
+        flex-grow: 1;
+        gap: 5px;
+        padding: 20px;
+        background-color: thistle;
+      }
+
+      .box-group img {
+        width: 150px;
+      }
+
+      .input-group {
+        width: 300px;
+        background-color: mediumaquamarine;
+        padding: 20px;
+        flex-shrink: 0;
+      }
+
+      @media (max-width: 767px) {
+        .group {
+          flex-direction: column-reverse;
+        }
+
+        .box-group {
+          background-color: tomato;
+        }
+
+        .input-group {
+          width: 100%;
+          background-color: mistyrose;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="group">
+      <div class="box-group">
+        <img src="00-dog.jpg" />
+        <img src="00-dog.jpg" />
+        <img src="00-dog.jpg" />
+        <img src="00-dog.jpg" />
+      </div>
+      <div class="input-group">
+        <h1>강아지 옷 등록하기</h1>
+        옷 이름 : <input type="text" />
+        <button>등록하기</button>
+      </div>
+    </div>
+  </body>
+</html>

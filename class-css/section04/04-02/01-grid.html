@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>grid</title>
+    <style>
+      .box {
+        width: 1600px;
+        height: 1600px;
+        display: grid;
+        grid-template-rows: 400px 400px 400px;
+        grid-template-columns: 1fr 1fr 1fr;
+        background-color: lightgoldenrodyellow;
+
+        place-content: end center;
+        /* 상자 전체 정렬: 상하 좌우 */
+        place-items: center center;
+        /* 상자 아이템 정렬: 상하 좌우 */
+
+        column-gap: 100px;
+        row-gap: 50px;
+      }
+
+      .dog {
+        width: 250px;
+        border: 4px solid #000;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <img src="00-dog.jpg" class="dog" />
+      <img src="00-dog.jpg" class="dog" />
+      <img src="00-dog.jpg" class="dog" />
+      <img src="00-dog.jpg" class="dog" />
+      <img src="00-dog.jpg" class="dog" />
+      <img src="00-dog.jpg" class="dog" />
+      <img src="00-dog.jpg" class="dog" />
+      <img src="00-dog.jpg" class="dog" />
+    </div>
+  </body>
+</html>

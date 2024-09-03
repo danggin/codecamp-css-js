@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>rem</title>
+    <style>
+      :root {
+        font-size: 10px;
+      }
+
+      .box {
+        width: 15rem;
+        height: 15rem;
+        background-color: lightseagreen;
+        margin: 20px;
+      }
+
+      @media (max-width: 767px) {
+        :root {
+          font-size: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+  </body>
+</html>

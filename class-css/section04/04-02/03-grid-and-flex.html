@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>grid and flex</title>
+    <style>
+      .box {
+        max-width: 1100px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        background-color: lightgoldenrodyellow;
+        padding: 50px;
+      }
+
+      .dog {
+        width: 250px;
+      }
+
+      @media (max-width: 700px) {
+        .box {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+        }
+
+        .dog {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <img src="00-dog.jpg" class="dog" />
+      <img src="00-dog.jpg" class="dog" />
+      <img src="00-dog.jpg" class="dog" />
+      <img src="00-dog.jpg" class="dog" />
+      <img src="00-dog.jpg" class="dog" />
+      <img src="00-dog.jpg" class="dog" />
+      <img src="00-dog.jpg" class="dog" />
+      <img src="00-dog.jpg" class="dog" />
+      <img src="00-dog.jpg" class="dog" />
+    </div>
+  </body>
+</html>
