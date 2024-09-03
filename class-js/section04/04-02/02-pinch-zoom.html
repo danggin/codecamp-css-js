@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <title>Pinch zoom</title>
+    <script>
+      const viewOriginal = () => {
+        document.body.style = 'background-color: black;';
+        document.querySelector('.dog').style = 'width: 100%;';
+        document.getElementsByName('viewport')[0].content = `
+        width=device-width,
+        initial-scale=1.0,
+        minimum-scale=1.0,
+        maximumscale=3.0,
+        user-scalable=yes,
+        minimum-scale=1.0,
+        maximumscale,
+        `;
+      };
+    </script>
+  </head>
+  <body>
+    <img src="00-dog.jpg" width="50%" onclick="viewOriginal()" class="dog" />
+  </body>
+</html>

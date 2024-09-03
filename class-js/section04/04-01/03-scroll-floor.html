@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>Scroll Floor</title>
+    <script>
+      window.addEventListener('scroll', () => {
+        const scrolledHeight = window.scrollY;
+        const scrollbarHeight = document.documentElement.clientHeight;
+        const scrollHeight = document.documentElement.scrollHeight;
+
+        if (scrolledHeight + scrollbarHeight === scrollHeight) {
+          alert('스크롤이 바닥에 닿았습니다.');
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <img src="00-dog.jpg" width="100%" />
+  </body>
+</html>

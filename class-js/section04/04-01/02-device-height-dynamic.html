@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>Device Height</title>
+    <style>
+      * {
+        margin: unset;
+        padding: unset;
+      }
+
+      img {
+        vertical-align: top;
+      }
+
+      .footer {
+        height: 100px;
+        background-color: mintcream;
+      }
+
+      .button-floating {
+        position: fixed;
+        bottom: 10px;
+        left: 90%;
+      }
+    </style>
+    <script>
+      window.addEventListener('scroll', () => {
+        const windowToFooter = document.querySelector('.footer').getBoundingClientRect().top;
+        const windowheight = window.innerHeight;
+        console.log('푸터까지의높이:' + windowToFooter);
+        console.log('화면높이:' + windowheight);
+
+        if (windowheight >= windowToFooter) {
+          document.querySelector('.button-floating').style = `
+                position: relative;
+                bottom: 40px;
+                left: 90%;
+            `;
+        } else {
+          document.querySelector('.button-floating').style = `
+                position: fixed;
+                bottom: 10px;
+                left: 90%;
+            `;
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <img src="00-dog.jpg" width="100%" />
+    <button class="button-floating">^</button>
+    <footer class="footer">Footer</footer>
+  </body>
+</html>
