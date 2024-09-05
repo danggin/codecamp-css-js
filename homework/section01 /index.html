@@ -3,8 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/index.css" />
-    <script src="./javascript/index.js"></script>
+    <link rel="stylesheet" href="./assets/styles/index.css" />
     <title>일기보관함</title>
   </head>
   <body>
@@ -33,7 +32,7 @@
             <ul class="panel-list flexbox">
               <li class="panel-item">
                 <a href="">
-                  <div class="emotion-card">
+                  <div class="emotion-cover">
                     <img src="./assets/images/image_emotion_sad.png" />
                   </div>
                   <div class="panel-info">
@@ -47,7 +46,7 @@
               </li>
               <li class="panel-item">
                 <a href="">
-                  <div class="emotion-card">
+                  <div class="emotion-cover">
                     <img src="./assets/images/image_emotion_suprising.png" />
                   </div>
                   <div class="panel-info">
@@ -61,7 +60,7 @@
               </li>
               <li class="panel-item">
                 <a href="">
-                  <div class="emotion-card">
+                  <div class="emotion-cover">
                     <img src="./assets/images/image_emotion_angry.png" />
                   </div>
                   <div class="panel-info">
@@ -75,7 +74,7 @@
               </li>
               <li class="panel-item">
                 <a href="">
-                  <div class="emotion-card">
+                  <div class="emotion-cover">
                     <img src="./assets/images/image_emotion_happy.png" />
                   </div>
                   <div class="panel-info">
@@ -89,7 +88,7 @@
               </li>
               <li class="panel-item">
                 <a href="">
-                  <div class="emotion-card">
+                  <div class="emotion-cover">
                     <img src="./assets/images/image_emotion_etc.png" />
                   </div>
                   <div class="panel-info justify-between">
@@ -103,7 +102,7 @@
               </li>
               <li class="panel-item">
                 <a href="">
-                  <div class="emotion-card">
+                  <div class="emotion-cover">
                     <img src="./assets/images/image_emotion_happy.png" />
                   </div>
                   <div class="panel-info">
@@ -125,23 +124,23 @@
                     <div class="emotions flexbox">
                       <div class="emotion flexbox align-center">
                         <input type="radio" id="emotion-happy" name="emotion" />
-                        <label for="emotion-happy" class="emotion-label emotion-happy">행복해요</label>
+                        <label for="emotion-happy">행복해요</label>
                       </div>
                       <div class="emotion flexbox align-center">
                         <input type="radio" id="emotion-sad" name="emotion" />
-                        <label for="emotion-sad" class="emotion-label emotion-sad">슬퍼요</label>
+                        <label for="emotion-sad">슬퍼요</label>
                       </div>
                       <div class="emotion flexbox align-center">
                         <input type="radio" id="emotion-surprising" name="emotion" />
-                        <label for="emotion-surprising" class="emotion-label emotion-surprising">놀랐어요</label>
+                        <label for="emotion-surprising">놀랐어요</label>
                       </div>
                       <div class="emotion flexbox align-center">
                         <input type="radio" id="emotion-angry" name="emotion" />
-                        <label for="emotion-angry" class="emotion-label emotion-angry">화나요</label>
+                        <label for="emotion-angry">화나요</label>
                       </div>
                       <div class="emotion flexbox align-center">
                         <input type="radio" id="emotion-etc" name="emotion" />
-                        <label for="emotion-etc" class="emotion-label emotion-etc">기타</label>
+                        <label for="emotion-etc">기타</label>
                       </div>
                     </div>
                     <div class="input-title-area">
@@ -155,7 +154,7 @@
                   </div>
 
                   <div>
-                    <button class="button-register" type="button" onclick="registerDiary()">등록하기</button>
+                    <button class="button-register" disabled>등록하기</button>
                   </div>
                 </fieldset>
               </form>
