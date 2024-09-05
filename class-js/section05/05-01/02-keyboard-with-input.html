@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Keyboard with Input</title>
+    <script>
+      const add = () => {
+        const isFocused = document.activeElement.id === 'subject' || document.activeElement.id === 'content';
+
+        if (isFocused) {
+          alert('게시글이 등록되었습니다.');
+        } else {
+          alert('내용을 입력해 주세요.');
+        }
+      };
+
+      window.addEventListener('keydown', (event) => {
+        const key = event.key;
+
+        if (key === 'Enter') {
+          const isFocused = document.activeElement.id === 'subject' || document.activeElement.id === 'content';
+
+          if (isFocused) {
+            add();
+          } else {
+            alert('내용을 입력해 주세요.');
+          }
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <div>제목: <input type="text" id="subject" /></div>
+    <div>내용: <input type="text" id="content" /></div>
+    <button class="add" onclick="add()">등록</button>
+  </body>
+</html>

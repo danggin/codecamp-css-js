@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Keyboard</title>
+  </head>
+  <style>
+    .dog {
+      width: 50px;
+      height: auto;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  </style>
+  <script>
+    window.addEventListener('keydown', (event) => {
+      const dog = document.querySelector('.dog');
+      const style = getComputedStyle(dog);
+      const positionY = Number(style.top.replace('px', ''));
+      const positionX = Number(style.left.replace('px', ''));
+      const key = event.key;
+
+      let booster = 1;
+
+      switch (key) {
+        case 'ArrowUp': {
+          dog.style = `top: ${(positionY - 10) / booster}px; left: ${positionX}px`;
+          break;
+        }
+        case 'ArrowDown': {
+          dog.style = `top: ${(positionY + 10) * booster}px; left: ${positionX}px`;
+          break;
+        }
+        case 'ArrowLeft': {
+          dog.style = `top: ${positionY}px; left: ${(positionX - 10) / booster}px`;
+          break;
+        }
+        case 'ArrowRight': {
+          dog.style = `top: ${positionY}px; left: ${(positionX + 10) * booster}px`;
+          break;
+        }
+
+        case ' ': {
+          booster = booster + 0.1;
+          break;
+        }
+      }
+    });
+  </script>
+  <body>
+    <img src="./00-dog.jpg" class="dog" />
+  </body>
+</html>

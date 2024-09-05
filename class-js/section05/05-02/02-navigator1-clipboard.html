@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clipboard</title>
+    <script>
+      const copy = () => {
+        const content = document.querySelector('.content').innerHTML;
+        navigator.clipboard.writeText(content);
+      };
+      const copyFrom = () => {
+        const content = document.querySelector('.content').innerHTML;
+
+        navigator.clipboard.writeText(`다인의다이어리: ${content}`);
+      };
+    </script>
+  </head>
+  <body>
+    <div class="content">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur veritatis ratione minima soluta autem! Quod sequi necessitatibus aliquam dignissimos! Ex exercitationem soluta quod non hic,
+      praesentium omnis fugit similique excepturi?
+    </div>
+    <button onclick="copy()">복사하기</button>
+    <button onclick="copyFrom()">꾸며서 복사하기</button>
+  </body>
+</html>
