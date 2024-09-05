@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>z-index</title>
+    <style>
+      .floor {
+        width: 1000px;
+        height: 1000px;
+        background-color: blanchedalmond;
+        margin: 100px;
+        padding: 100px;
+        position: absolute;
+        /* 쌓임 맥락 기준으로 부모(containing block)는 상위 요소가 아닌 상위 태그들 중 쌓임 맥락에 포함된 태그 */
+      }
+
+      .paper {
+        width: 500px;
+        height: 500px;
+        background-color: aliceblue;
+      }
+
+      .paper1,
+      .paper2,
+      .paper3 {
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      .paper1 {
+        background-color: paleturquoise;
+        z-index: 999;
+      }
+      .paper2 {
+        background-color: deepskyblue;
+        top: 20px;
+        left: 20px;
+        z-index: 1;
+      }
+      .paper3 {
+        background-color: royalblue;
+        top: 40px;
+        left: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="floor">
+      <div class="paper">
+        <div class="paper1"></div>
+        <div class="paper2"></div>
+        <div class="paper3"></div>
+      </div>
+    </div>
+  </body>
+</html>

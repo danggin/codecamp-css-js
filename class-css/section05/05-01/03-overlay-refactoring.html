@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Overlay Refactoring</title>
+    <style>
+      .card {
+        margin: 100px;
+        width: 500px;
+        position: relative;
+      }
+
+      .cover img {
+        width: 100%;
+        height: auto;
+        vertical-align: top;
+      }
+
+      .delete {
+        position: absolute;
+        top: -10px;
+        right: -10px;
+
+        /* 겹치기할 때, absolute(내 아래 요소들도 재배치) vs relative(내 아래 요소는 그대로 두고 내 위치만 옮기기) */
+        /* position: relative;
+        top: -5px;
+        right: -5px; */
+      }
+
+      .text {
+        background-color: orange;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <div class="cover">
+        <img src="./00-dog.jpg" />
+      </div>
+      <button class="delete">X</button>
+      <div class="text">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta similique magnam adipisci numquam nobis quisquam molestiae est architecto et dolor, iusto perferendis asperiores nostrum
+        temporibus? Atque quis quibusdam dolores iusto.
+      </div>
+    </div>
+  </body>
+</html>

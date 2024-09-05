@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modal</title>
+    <style>
+      .modal-group {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      .modal-background {
+        width: 100vw;
+        height: 100vh;
+        background-color: aliceblue;
+        opacity: 50%;
+      }
+
+      .modal {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 300px;
+        height: 400px;
+        background-color: cadetblue;
+      }
+    </style>
+    <script>
+      const showModal = () => {
+        document.querySelector('.modal-group').style = 'display: block';
+      };
+
+      const showOffModal = () => {
+        document.querySelector('.modal-group').style = 'display: none';
+      };
+    </script>
+  </head>
+  <body>
+    <button onclick="showModal()">모달 열기</button>
+    <!-- 모달 -->
+    <div class="modal-group" onclick="showOffModal()">
+      <div class="modal-background"></div>
+      <div class="modal"></div>
+    </div>
+  </body>
+</html>

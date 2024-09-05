@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>z-index</title>
+    <style>
+      .box1,
+      .box2,
+      .box3 {
+        width: 200px;
+        height: 200px;
+      }
+
+      .box1 {
+        background-color: paleturquoise;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 999;
+      }
+      .box2 {
+        background-color: deepskyblue;
+        top: 20px;
+        left: 20px;
+        z-index: 10;
+        position: absolute;
+      }
+      .box3 {
+        background-color: royalblue;
+        top: 40px;
+        left: 40px;
+        position: absolute;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+  </body>
+</html>

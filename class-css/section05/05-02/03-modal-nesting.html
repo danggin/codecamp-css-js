@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>모달 실습</title>
+    <style>
+      /* 겹치기 핵심을 이해하지 못한 경우에 발생하는 실수 => 상위부모 position 두지 말 것 */
+      /* body {
+            margin: 20px;
+            position: relative;
+        } */
+
+      /* 1. 껍데기: 공통사용 */
+      .modal-group {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+      .modal-bg {
+        width: 100vw;
+        height: 100vh;
+        background-color: lightgray;
+        opacity: 50%;
+      }
+
+      /* 2. 알맹이: 등록모달 */
+      .modal-add {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 400px;
+        height: 500px;
+        background-color: white;
+      }
+
+      /* 3. 알맹이: 등록완료모달 */
+      .modal-finish {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 600px;
+        height: 150px;
+        background-color: white;
+      }
+    </style>
+    <script>
+      const showModal = (target) => {
+        document.getElementById(target).style = 'display: block;';
+      };
+      const closeModal = (target) => {
+        document.getElementById(target).style = 'display: none;';
+      };
+    </script>
+  </head>
+  <body>
+    <button onclick="showModal('modal-register')">모달열기</button>
+
+    <!-- 등록모달 -->
+    <div id="modal-register" class="modal-group">
+      <div class="modal-bg" onclick="closeModal('modal-register')"></div>
+      <div class="modal-add">
+        <div>제목: <input /></div>
+        <div>내용: <textarea></textarea></div>
+        <div><button onclick="showModal('modal-ok')">등록하기</button></div>
+      </div>
+    </div>
+
+    <!-- 등록완료모달 -->
+    <div id="modal-ok" class="modal-group">
+      <div class="modal-bg" onclick="closeModal('modal-ok')"></div>
+      <div class="modal-finish">
+        <p>등록이 완료되었습니다.</p>
+      </div>
+    </div>
+  </body>
+</html>
