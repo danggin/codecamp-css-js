@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image API</title>
+    <script>
+      const getSentence = () => {
+        fetch('https://dog.ceo/api/breeds/image/random/3').then((result) => {
+          result.json().then((object) => {
+            console.log(object);
+            const imageElem = object.message.map(
+              (item) => `
+              <img src='${item}' alt='강아지 사진' width='300px' />
+            `
+            );
+            document.querySelector('.dog').innerHTML = imageElem.join('');
+          });
+        });
+      };
+    </script>
+  </head>
+  <body>
+    <button onclick="getSentence()">내 운명의 강아지 알아보기</button>
+    <div class="dog"></div>
+  </body>
+</html>

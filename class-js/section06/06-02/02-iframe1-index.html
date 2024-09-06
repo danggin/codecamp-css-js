@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>iframe</title>
+    <style>
+      .banner {
+        height: 100px;
+        background-color: aliceblue;
+      }
+
+      .navigation {
+        height: 50px;
+        background-color: aquamarine;
+      }
+
+      iframe {
+        border: none;
+        width: 900px;
+        height: 500px;
+      }
+    </style>
+    <script>
+      const goPage = (category) => {
+        switch (category) {
+          case 'diary': {
+            document.querySelector('.content').src = './02-iframe2-diary.html';
+            break;
+          }
+          case 'dog': {
+            document.querySelector('.content').src = './02-iframe2-dog.html';
+            break;
+          }
+          case 'camp': {
+            document.querySelector('.content').src = 'https://codebootcamp.co.kr';
+          }
+        }
+      };
+    </script>
+  </head>
+  <body>
+    <div class="banner">배너이미지</div>
+    <div class="navigation">
+      <button onclick="goPage('diary')">일기</button>
+      <button onclick="goPage('dog')">강아지</button>
+      <button onclick="goPage('camp')">코드캠프</button>
+    </div>
+    <iframe class="content" src="./02-iframe2-diary.html"></iframe>
+  </body>
+</html>

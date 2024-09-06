@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>component</title>
+    <style>
+      .banner {
+        height: 100px;
+        background-color: aliceblue;
+      }
+
+      .navigation {
+        height: 50px;
+        background-color: aquamarine;
+      }
+
+      .dog {
+        display: none;
+      }
+    </style>
+    <script>
+      const goPage = (category) => {
+        switch (category) {
+          case 'diary': {
+            document.querySelector('.diary').style = 'display: block;';
+            document.querySelector('.dog').style = 'display: none;';
+            break;
+          }
+          case 'dog': {
+            document.querySelector('.diary').style = 'display: none;';
+            document.querySelector('.dog').style = 'display: block;';
+            break;
+          }
+        }
+      };
+    </script>
+  </head>
+  <body>
+    <div class="banner">배너이미지</div>
+    <div class="navigation">
+      <button onclick="goPage('diary')">일기</button>
+      <button onclick="goPage('dog')">강아지</button>
+    </div>
+    <div class="diary">
+      일기목록 화면입니다.
+      <div>일기1</div>
+      <div>일기2</div>
+      <div>...</div>
+    </div>
+    <div class="dog">
+      강아지 화면입니다.
+      <div>강아지1</div>
+      <div>강아지2</div>
+      <div>...</div>
+    </div>
+  </body>
+</html>
