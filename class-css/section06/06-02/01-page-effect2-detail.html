@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detail</title>
+    <style>
+      @keyframes nextPage {
+        from {
+          opacity: 0;
+          transform: translateX(100%);
+        }
+
+        to {
+          opacity: 1;
+          transform: translateX(0%);
+        }
+      }
+
+      .page {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        width: 100vh;
+
+        animation-name: nextPage;
+        animation-duration: 0.5s;
+      }
+
+      .box {
+        width: 400px;
+        height: 400px;
+        background-color: lemonchiffon;
+      }
+
+      p {
+        white-space: pre;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <div class="box"></div>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+      <div class="box"></div>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+    </div>
+  </body>
+</html>

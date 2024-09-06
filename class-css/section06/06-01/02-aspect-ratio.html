@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      img {
+        width: 300px;
+        background-color: black;
+      }
+      .dog1 {
+        aspect-ratio: 1 / 3; /* 가로 1 : 세로 3 */
+      }
+      .dog2 {
+        aspect-ratio: 2 / 1; /* 가로 2 : 세로 1 */
+      }
+      .dog3 {
+        height: 300px;
+        aspect-ratio: 2 / 1; /* 가로 2 : 세로 1 */
+      }
+      .button {
+        width: 100px;
+        aspect-ratio: 2 / 1; /* 가로 2 : 세로 1 */
+      }
+    </style>
+  </head>
+  <body>
+    <div>1:3</div>
+    <img src="./00-dog.jpg" class="dog1" />
+
+    <div>2:1</div>
+    <img src="./00-dog.jpg" class="dog2" />
+
+    <div>2:1</div>
+    <img src="./00-dog.jpg" class="dog3" />
+
+    <div>2:1</div>
+    <button class="button">버튼</button>
+  </body>
+</html>

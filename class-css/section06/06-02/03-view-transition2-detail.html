@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detail</title>
+    <style>
+      @view-transition {
+        navigation: auto;
+      }
+
+      @keyframes prevPage {
+        from {
+          transform: translateX(0%);
+        }
+
+        to {
+          transform: translateX(-100%);
+        }
+      }
+
+      @keyframes nextPage {
+        from {
+          opacity: 0;
+          transform: translateX(100%);
+        }
+
+        90% {
+          opacity: 0.5;
+        }
+
+        to {
+          opacity: 1;
+          transform: translateX(0%);
+        }
+      }
+
+      ::view-transition-old(root) {
+        animation-name: prevPage;
+        animation-duration: 3s;
+      }
+
+      ::view-transition-new(root) {
+        animation-name: nextPage;
+        animation-duration: 1.5s;
+      }
+
+      .box {
+        width: 400px;
+        height: 400px;
+        background-color: lemonchiffon;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <div class="box"></div>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+      <div class="box"></div>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+    </div>
+  </body>
+</html>

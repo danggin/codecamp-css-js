@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page Effect</title>
+    <style>
+      .box {
+        width: 1000px;
+        height: 200px;
+        background-color: aliceblue;
+        margin-top: 10px;
+      }
+
+      @view-transition {
+        navigation: auto;
+      }
+
+      @keyframes prevPage {
+        from {
+          transform: translateX(0%);
+        }
+
+        to {
+          transform: translateX(100%);
+        }
+      }
+
+      @view-transition-old (root) {
+        animation-name: prevPage;
+        animation-duration: 3s;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="./03-view-transition2-detail.html">페이지 이동하기</a>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+  </body>
+</html>

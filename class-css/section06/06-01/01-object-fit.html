@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Object-fit</title>
+    <style>
+      img {
+        background-color: black;
+        width: 300px;
+        height: 300px;
+      }
+      .cover {
+        object-fit: cover;
+      }
+
+      .contain {
+        object-fit: contain;
+      }
+    </style>
+  </head>
+  <body>
+    <div>cover</div>
+    <img src="./00-dog.jpg" class="cover" />
+
+    <div>contain</div>
+    <img src="./00-dog.jpg" class="contain" />
+  </body>
+</html>
