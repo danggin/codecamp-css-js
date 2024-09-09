@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style>
+      .box {
+        width: 500px;
+        height: 500px;
+        background-color: seagreen;
+        margin-top: 50px;
+      }
+    </style>
+    <script>
+      const renderBoxes = () => {
+        const oldBox = document.querySelector('.result').innerHTML;
+        document.querySelector('.result').innerHTML = oldBox + `<div class='box'></div>`;
+      };
+
+      window.addEventListener('scroll', () => {
+        const scrollPercent = document.documentElement.scrollTop / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
+
+        if (scrollPercent >= 0.9) {
+          console.log('상자를 그려줍니다');
+          renderBoxes();
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <div class="result">
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+    </div>
+  </body>
+</html>

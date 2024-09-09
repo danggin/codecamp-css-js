@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Debounce Search</title>
+    <script>
+      const friends = ['철수', '영희', '철이', '철민', '민희'];
+      let timer;
+
+      const search = (event) => {
+        const value = event.target.value;
+
+        if (!value) return;
+
+        clearTimeout(timer);
+
+        timer = setTimeout(() => {
+          const result = friends.filter((el) => el.includes(value)).map((item) => `<p>${item}</p>`);
+
+          document.querySelector('.result-list').innerHTML = result.join('');
+        }, 1000);
+      };
+    </script>
+  </head>
+  <body>
+    <input type="text" placeholder="친구를 검색해 보세요." oninput="search(event)" />
+    <div class="result-list"></div>
+  </body>
+</html>
