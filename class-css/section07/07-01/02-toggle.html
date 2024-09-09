@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Toggle</title>
+    <style>
+      .toggle {
+        appearance: none;
+        width: 40px;
+        height: 24px;
+        border-radius: 20px;
+        background-color: lightgray;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+      }
+      .toggle::after {
+        content: '';
+        width: 20px;
+        height: 20px;
+        background-color: white;
+        margin-left: 2px;
+        transition: all 0.3s;
+        border-radius: 50%;
+      }
+      .toggle:checked {
+        background-color: greenyellow;
+      }
+
+      .toggle:checked::after {
+        margin-left: 18px;
+      }
+    </style>
+    <script>
+      const toggle = (event) => {
+        const isChecked = event.target.checked;
+        console.log(isChecked);
+      };
+    </script>
+  </head>
+  <body>
+    <input type="checkbox" class="toggle" onclick="toggle()" />
+  </body>
+</html>

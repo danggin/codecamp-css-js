@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dark Mode</title>
+    <style>
+      .light {
+        color: black;
+        background-color: white;
+      }
+      .dark {
+        color: white;
+        background-color: black;
+      }
+    </style>
+    <script>
+      const toggleDark = (event) => {
+        const isChecked = event.target.checked;
+
+        if (isChecked) {
+          document.querySelector('body').className = 'dark';
+        } else {
+          document.querySelector('body').className = 'light';
+        }
+      };
+    </script>
+  </head>
+  <body class="light">
+    <input type="checkbox" onclick="toggleDark(event)" /> 불끄고 잠자기<br />
+    <br /><br />
+    이메일: <input type="text" /><br />
+    비밀번호: <input type="password" /><br />
+    <button>회원가입</button>
+  </body>
+</html>

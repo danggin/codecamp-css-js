@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dark Mode</title>
+    <style>
+      /* Light Mode */
+      :root {
+        --color: black;
+        --bg-color: white;
+        --check-color: red;
+        --input-bg-color: lightgray;
+        --input-placeholder: gray;
+        --button-color: black;
+        --button-bg-color: lightgray;
+      }
+
+      body {
+        color: var(--color);
+        background-color: var(--bg-color);
+        accent-color: var(--check-color);
+      }
+
+      input {
+        background-color: var(--input-bg-color);
+      }
+
+      input::placeholder {
+        color: var(--input-placeholder);
+      }
+
+      button {
+        color: var(--button-color);
+        background-color: var(--button-bg-color);
+      }
+
+      /* Dark Mode */
+
+      [isDarked='dark'] {
+        --color: white;
+        --bg-color: black;
+        --check-color: white;
+        --input-bg-color: gray;
+        --input-placeholder: orange;
+        --button-color: orangered;
+        --button-bg-color: aquamarine;
+      }
+
+      body {
+        color: var(--color);
+        background-color: var(--bg-color);
+        accent-color: var(--check-color);
+      }
+
+      input {
+        background-color: var(--input-bg-color);
+      }
+
+      input::placeholder {
+        color: var(--input-placeholder);
+      }
+
+      button {
+        color: var(--button-color);
+        background-color: var(--button-bg-color);
+      }
+    </style>
+    <script>
+      const toggleDark = (event) => {
+        const isChecked = event.target.checked;
+
+        if (isChecked) {
+          document.documentElement.setAttribute('isDarked', 'dark');
+        } else {
+          document.documentElement.removeAttribute('isDarked', 'dark');
+        }
+      };
+    </script>
+  </head>
+  <body class="light">
+    <input type="checkbox" onclick="toggleDark(event)" /> 불끄고 잠자기<br />
+    <br /><br />
+    <div class="signup-card">
+      이메일: <input type="text" placeholder="이메일을 입력하세요." /><br />
+      비밀번호: <input type="password" placeholder="비밀번호를 입력하세요." /><br />
+      <input type="radio" name="gneder" /> 여자<br />
+      <input type="radio" name="gneder" /> 남자<br />
+      <button>회원가입</button>
+    </div>
+  </body>
+</html>
