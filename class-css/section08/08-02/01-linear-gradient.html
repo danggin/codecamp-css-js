@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Linear Gradient</title>
+    <style>
+      .linear1 {
+        width: 300px;
+        height: 300px;
+        background: linear-gradient(180deg, orangered, aqua, rgb(61, 228, 133), lemonchiffon);
+      }
+      .linear2 {
+        width: 300px;
+        height: 300px;
+        background: linear-gradient(113deg, orangered, aqua, lavender, lemonchiffon);
+        background: linear-gradient(20deg, lavender 30%, purple 30% 100%);
+        /* 30%까지 lavender, 30%부터 100% 까지 purple */
+        background: linear-gradient(20deg, lavender, lemonchiffon 30%);
+        /* lavender의 범위를 지정하지 않았기 때문에 부드럽게 이어짐 */
+      }
+
+      .linear3 {
+        width: 300px;
+        height: 300px;
+        background: linear-gradient(100deg, lavender, transparent), linear-gradient(220deg, orangered, transparent);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="linear1"></div>
+    <div class="linear2"></div>
+    <div class="linear3"></div>
+  </body>
+</html>

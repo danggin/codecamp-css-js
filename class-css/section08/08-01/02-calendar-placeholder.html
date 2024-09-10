@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calendar Placeholder</title>
+    <style>
+      .my-date {
+        position: relative;
+        width: 200px;
+      }
+
+      .my-date::before {
+        content: attr(placeholder);
+        /* 실무에서는 data-* 형태로 사용한다 ex. data-birthday */
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      .my-date::-webkit-datetime-edit-text,
+      ::-webkit-datetime-edit-year-field,
+      ::-webkit-datetime-edit-month-field,
+      ::-webkit-datetime-edit-day-field {
+        display: none;
+      }
+
+      .my-date::-webkit-calendar-picker-indicator {
+        width: 100%;
+        background: transparent;
+        position: absolute;
+        inset: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="date" class="my-date" placeholder="생일을 입력해 주세요." />
+  </body>
+</html>
