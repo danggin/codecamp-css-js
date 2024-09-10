@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pagination</title>
+    <script>
+      window.onload = () => {
+        const numberArray = new Array(10).fill(1);
+
+        const pages = numberArray
+          .map(
+            (_, index) => `
+        <button>${index + 1}</button>
+      `
+          )
+          .join('');
+
+        document.querySelector('.pagination').innerHTML = pages;
+      };
+    </script>
+  </head>
+  <body>
+    <div class="pagination"></div>
+  </body>
+</html>

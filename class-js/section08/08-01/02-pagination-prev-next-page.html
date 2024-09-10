@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pagination</title>
+    <script>
+      let startPage = 1;
+
+      const prevPage = () => {
+        if (startPage < 11) return;
+
+        startPage = startPage - 10;
+        renderPageNumber();
+        console.log(startPage);
+      };
+
+      const nextPage = () => {
+        startPage = startPage + 10;
+        renderPageNumber();
+      };
+
+      const renderPageNumber = () => {
+        const numberArray = new Array(10).fill(1);
+
+        const pages = numberArray
+          .map(
+            (_, index) => `
+        <button>${index + startPage}</button>
+      `
+          )
+          .join('');
+
+        document.querySelector('.pagination').innerHTML = pages;
+      };
+
+      window.onload = () => {
+        renderPageNumber();
+      };
+    </script>
+  </head>
+  <body>
+    <button onclick="prevPage()">이전</button>
+    <span class="pagination"></span>
+    <button onclick="nextPage()">다음</button>
+  </body>
+</html>
