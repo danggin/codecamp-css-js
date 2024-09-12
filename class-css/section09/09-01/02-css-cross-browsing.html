@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Cross Browsing</title>
+    <style>
+      .my-date::-webkit-datetime-edit-text,
+      ::-webkit-datetime-edit-year-field,
+      ::-webkit-datetime-edit-month-field,
+      ::-webkit-datetime-edit-day-field {
+        display: none;
+      }
+
+      .my-date ::-moz-datetime-edit-text {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    날짜: <input type="date" class="my-date" />
+  </body>
+</html>

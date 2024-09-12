@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FOIT vs FOUT</title>
+    <style>
+      @font-face {
+        font-family: font01;
+        src: url('./00-myfont02.woff2');
+
+        font-display: block;
+      }
+
+      @font-face {
+        font-family: font02;
+        src: url('./00-myfont02.woff2');
+
+        font-display: swap;
+      }
+
+      .foit {
+        font-family: 'font01';
+      }
+      .fout {
+        font-family: 'font02';
+      }
+    </style>
+  </head>
+  <body>
+    <div class="foit">FOIT 폰트</div>
+    <div class="fout">FOUT 폰트</div>
+  </body>
+</html>

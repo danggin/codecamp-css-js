@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Font</title>
+    <style>
+      @font-face {
+        font-family: font01;
+        src: url('./00-myfont01.woff2');
+      }
+
+      @font-face {
+        font-family: font02;
+        src: url('./00-myfont02.woff2');
+      }
+
+      * {
+        font-family: 'font01', san-serif;
+      }
+
+      .box {
+        font-family: 'font02', san-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <div>안녕하세요</div>
+    <div>안녕하세요</div>
+
+    <div class="box">안녕하세요 독거미 키보드를 샀다네요</div>
+  </body>
+</html>

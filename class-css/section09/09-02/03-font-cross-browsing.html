@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Font Cross Browsing</title>
+    <style>
+      @font-face {
+        font-family: font01;
+        src: url('./00-myfont03-cross-browsing.ttf');
+      }
+
+      .font {
+        font-family: 'font01';
+      }
+
+      /* safari를 감지하는 media query */
+
+      @media not all and (min-resolution: 0.001dpcm) {
+        body {
+          color: aliceblue;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="font">폰트연습</div>
+  </body>
+</html>
