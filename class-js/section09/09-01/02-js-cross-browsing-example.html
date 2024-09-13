@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/3.38.1/minified.js"></script> -->
+    <title>Document</title>
+    <script>
+      const show = () => {
+        const user = {
+          name: '철수',
+          age: 12,
+        };
+        const userString = JSON.stringify(user);
+
+        // 사파리 안 됨
+        JSON.parse(userString, (key, value, context) => {
+          console.log(context);
+        });
+      };
+    </script>
+  </head>
+  <body>
+    <button onclick="show()">안되는거 보여줘</button>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/3.38.1/minified.js"></script>
+    <title>JS Cross Browsing</title>
+    <script>
+      const showDate = () => {
+        const examDate = new Date('2024-09-10 10:30:00');
+        const month = examDate.getMonth() + 1;
+
+        alert(`자격증 시험일은 ${month}월 이네요!`);
+      };
+
+      const showFruit = () => {
+        const fruits = ['사과', '바나나', '딸기'];
+        console.log((fruit = fruits.at(-1)));
+      };
+    </script>
+  </head>
+  <body>
+    <button onclick="showDate()">시험날짜</button>
+    <button onclick="showFruit()">과일</button>
+  </body>
+</html>
