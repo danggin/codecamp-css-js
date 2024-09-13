@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Editor - Quill js</title>
+    <link href="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.snow.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.js"></script>
+    <script>
+      window.onload = () => {
+        const detail = document.querySelector('.detail');
+        const profileItem = localStorage.getItem('profile');
+
+        detail.innerHTML = profileItem;
+      };
+    </script>
+  </head>
+  <body>
+    <div class="detail"></div>
+  </body>
+</html>

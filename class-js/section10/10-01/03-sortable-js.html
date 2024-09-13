@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sortable js</title>
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.3/Sortable.min.js"></script>
+    <script>
+      window.onload = () => {
+        var el = document.getElementById('items');
+
+        Sortable.create(el);
+      };
+    </script>
+    <style>
+      li {
+        list-style: none;
+        width: 500px;
+        height: 30px;
+        border: 1px solid orangered;
+        cursor: pointer;
+        text-align: center;
+        background-color: antiquewhite;
+      }
+    </style>
+  </head>
+  <body>
+    <ul id="items">
+      <li>item 1</li>
+      <li>item 2</li>
+      <li>item 3</li>
+    </ul>
+  </body>
+</html>

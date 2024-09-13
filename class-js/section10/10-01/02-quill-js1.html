@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Editor - Quill js</title>
+    <link href="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.snow.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.js"></script>
+  </head>
+  <body>
+    <div id="editor">
+      <p>친구의 프로필을 입력하세요.</p>
+    </div>
+    <button onclick="register()">등록하기</button>
+    <script>
+      const quill = new Quill('#editor', {
+        theme: 'snow',
+      });
+
+      const register = () => {
+        const content = quill.getSemanticHTML();
+
+        localStorage.setItem('profile', content);
+
+        quill.setText('친구의 프로필을 입력하세요.');
+
+        location.href('./02-auill-js2-dedail.html');
+      };
+    </script>
+  </body>
+</html>
