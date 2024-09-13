@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS in JS - Emotion</title>
+    <script src="https://cdn.jsdelivr.net/npm/@emotion/css@11.13.0/dist/emotion-css.umd.min.js"></script>
+    <script>
+      const customButton = window.emotion.css`
+            background-color: lightskyblue;
+            color: gray
+        `;
+
+      window.onload = () => {
+        document.querySelector('.box').innerHTML = `<button class="${customButton}">등록하기</button>`;
+      };
+    </script>
+  </head>
+  <body>
+    <div class="box"></div>
+  </body>
+</html>

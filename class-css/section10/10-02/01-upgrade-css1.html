@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sass</title>
+    <style class="sass-sstyle"></style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sass.js/0.9.12/sass.sync.min.js"></script>
+    <script>
+      fetch('./01-upgrade-css1.sass').then((SassFile) => {
+        SassFile.text().then((SassFileText) => {
+          Sass.compile(SassFileText, { indentedSyntax: true }, (css) => {
+            console.log(css);
+            console.log(css.text);
+
+            document.querySelector('.sass-sstyle').textContent = css.text;
+          });
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <button class="button-1">버튼1</button><br />
+    <button class="button-2">버튼2</button><br />
+    <button class="button-3">버튼3</button>
+  </body>
+</html>
